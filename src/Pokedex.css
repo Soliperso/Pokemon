@@ -1,0 +1,84 @@
+.Pokedex {
+  flex: 1 1 360px;
+  min-width: 0;
+  padding: 22px 22px 26px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: box-shadow 250ms ease, border-color 250ms ease, transform 250ms ease;
+}
+
+/* Winning hand gets a neon glow + lift. */
+.Pokedex.is-winner {
+  border-color: rgba(56, 224, 138, 0.55);
+  box-shadow: 0 0 0 1px rgba(56, 224, 138, 0.4) inset,
+    0 22px 60px -20px rgba(56, 224, 138, 0.5), var(--shadow);
+  transform: translateY(-4px);
+}
+
+.Pokedex-head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Pokedex-status {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Pokedex-crown {
+  font-size: 1.2rem;
+}
+
+.Pokedex-winner {
+  color: var(--win);
+}
+
+.Pokedex-loser {
+  color: var(--lose);
+}
+
+.Pokedex-tie {
+  color: var(--accent);
+}
+
+.Pokedex-exp {
+  margin: 6px 0 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.Pokedex-exp span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+.Pokedex-margin {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--win);
+}
+
+/* 2 columns => 4 cards lay out as 2 rows. */
+.Pokedex-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 460px) {
+  .Pokedex-cards {
+    grid-template-columns: 1fr;
+  }
+}

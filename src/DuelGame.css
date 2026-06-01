@@ -1,0 +1,249 @@
+.Duel-phase {
+  margin-top: 26px;
+}
+
+/* ---- Top bar (draft) ---- */
+.Duel-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 20px;
+  margin-bottom: 22px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.Duel-instruction {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.Duel-instruction strong {
+  color: var(--text);
+}
+
+.Duel-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Duel-counter {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 48px;
+  text-align: center;
+}
+
+/* ---- Card grids ---- */
+.Duel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+/* ---- Duel status row ---- */
+.Duel-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 18px;
+}
+
+.Duel-round {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.Duel-tally {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* ---- CPU side ---- */
+.Duel-cpu {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.Duel-cpu-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.Duel-cpu-backs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cardback {
+  width: 30px;
+  height: 42px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.08) 4px,
+      rgba(255, 255, 255, 0.02) 4px,
+      rgba(255, 255, 255, 0.02) 8px
+    ),
+    linear-gradient(160deg, var(--accent-2), #1b1140);
+  border: 1px solid var(--card-border);
+}
+
+/* ---- Stat picker ---- */
+.Duel-statpick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.Duel-statpick-label {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.Duel-statbtn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--panel-border);
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, transform 120ms ease;
+}
+
+.Duel-statbtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.Duel-statbtn.is-active {
+  color: #0b1026;
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.Duel-attack {
+  padding: 10px 24px;
+}
+
+.Duel-hint {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin: 4px 0 22px;
+}
+
+/* ---- Reveal ---- */
+.Duel-reveal {
+  text-align: center;
+  animation: fade-in 220ms ease both;
+}
+
+.Duel-banner {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 6px 0;
+}
+
+.Duel-banner.is-you {
+  color: var(--win);
+}
+
+.Duel-banner.is-cpu {
+  color: var(--lose);
+}
+
+.Duel-banner.is-draw {
+  color: var(--accent);
+}
+
+.Duel-reveal-sub {
+  color: var(--text-dim);
+  margin: 0 0 18px;
+}
+
+.Duel-reveal-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.Duel-reveal-cards > div {
+  width: 240px;
+  max-width: 42vw;
+}
+
+.Duel-win {
+  filter: drop-shadow(0 0 22px rgba(56, 224, 138, 0.55));
+}
+
+/* ---- Result ---- */
+.Duel-result {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.Duel-result-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.Duel-result-title.is-you {
+  color: var(--win);
+}
+
+.Duel-result-title.is-cpu {
+  color: var(--lose);
+}
+
+.Duel-result-title.is-draw {
+  color: var(--accent);
+}
+
+.Duel-result-score {
+  color: var(--text-dim);
+  margin: 0 0 24px;
+  font-size: 1rem;
+}
+
+@media (max-width: 560px) {
+  .Duel-reveal-cards {
+    gap: 10px;
+  }
+  .Duel-reveal-cards > div {
+    width: 40vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Duel-reveal {
+    animation: none;
+  }
+}
