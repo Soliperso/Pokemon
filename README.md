@@ -1,70 +1,38 @@
-![](screenShot.png) 
+![Pokémon Battle screenshot](src/screenShot.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pokémon Battle
 
-## Available Scripts
+A small React game where Pokémon are pulled live from the [PokéAPI](https://pokeapi.co/)
+and pitted against each other. Built with **React 18** and **Vite**.
 
-In the project directory, you can run:
+## Game modes
 
-### `yarn start`
+- **⚡ Quick Battle** — a random roster is split into two hands; the hand with the
+  higher total base experience wins. Reshuffle with **Play Again**, track the running
+  score, and click any card to inspect its stats.
+- **⚔️ Duel** — draft a team of four, then duel the CPU card-by-card. Each round you
+  pick one of your cards and a stat (HP / Attack / Defense / Speed); the higher value
+  wins the round. Most round wins takes the duel.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If the PokéAPI can't be reached, the app falls back to a bundled offline roster.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting started
 
-### `yarn test`
+```bash
+npm install
+npm run dev      # start the dev server at http://localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Available scripts
 
-### `yarn build`
+| Command           | Description                                          |
+| ----------------- | ---------------------------------------------------- |
+| `npm run dev`     | Start the Vite dev server with hot-module reloading. |
+| `npm run build`   | Build an optimized production bundle into `build/`.  |
+| `npm run preview` | Serve the production build locally to preview it.    |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech stack
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [React 18](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [PokéAPI](https://pokeapi.co/) for Pokémon data and artwork
