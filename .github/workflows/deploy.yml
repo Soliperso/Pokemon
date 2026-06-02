@@ -29,6 +29,13 @@ jobs:
           node-version: 20
           cache: npm
 
+      # Switches the Pages source to "GitHub Actions" so our build artifact
+      # is served instead of the master branch via Jekyll.
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Install dependencies
         run: npm ci
 
