@@ -2,6 +2,8 @@
 
 # Pokémon Battle
 
+**▶️ [Live demo](https://soliperso.github.io/Pokemon/)**
+
 A small React game where Pokémon are pulled live from the [PokéAPI](https://pokeapi.co/)
 and pitted against each other. Built with **React 18** and **Vite**.
 
